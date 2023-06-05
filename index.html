@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset = "UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Font Awesome một framework trong việc cung cấp biểu tượng -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+    <!-- icon --> 
+    <link rel="shortcut icon" href="../image/logo/WL-logo.png" type="image/x-icon">
+    <title>Winla | Shop - thiết bị điện tử</title>    
+  </head>
+  <body>
+    <header> <!--phần đầu trang-->
+      <!-- logo -->
+      <div class="logo">
+          <a href="../Trangchu/index.html"><img class="winla" src="../image/logo/logo.png"></a>
+      </div>
+      <!-- form ô tìm kiếm có nút tìm kiếm -->
+      <form class="form-inline mx-auto class-search">
+        <div class="input-group w-100 ">
+          <input type="text" class="form-control" placeholder="Tìm kiếm..."> <!--form-control dùng để thay đổi kích thước input (lg , sm)-->
+          <button class="btn btn-light" type="submit"> <i class="fas fa-search"></i> </button> <!-- .btn nút bấm -->
+        </div>
+      </form>
+      <div class="ml-4">
+        <button title="Giỏ hàng" class="btn class1" id="id-gh" type="submit"> <i class="fa fa-shopping-cart" style="font-size: 20px;"></i></button>
+        <button title="Người dùng" class="btn ml-5 mr-5 class1" id="id-nd" type="submit" ><i class="fa fa-user" style="font-size: 20px;"></i></button>
+      </div>
+    </header>
+
+    <nav> <!--các điều hướng trang-->
+      <ul class="nav"> <!-- nav "navbar" xây dựng các chức năng điều hướng-->
+        <li class="nav-item"> <!--mục-->
+          <a class="nav-link active" href="index.html"> <i class="fas fa-home"></i>  Trang chủ</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sản phẩm
+          </a> <!-- nhấp vào sẽ mở hoặc đóng, phần tử như một nút bấm,  nhấp vào -> một dropdown menu sẽ xuất hiện và để js xử lý, mở ra, đang ẩn-->
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="../Child/laptop.html">Laptop</a>
+            <a class="dropdown-item" href="../Child/chuot.html">Chuột</a>
+            <a class="dropdown-item" href="../Child/banphim.html">Bàn phím</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="login-link">Đăng nhập</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id = "sign-in-link">Đăng ký</a>
+        </li>
+      </ul>
+    </nav> <!-- ------------- -->
+
+
+    <!-- Form đăng nhập -->
+    <div class="login-form">
+      <div class="login">
+        <button type="button" class="close-X">X</button> <!--nút X để tắt form-->
+        <form>
+          <div class="form-group">
+            <p class="mb-4 h4">Đăng nhập</p>
+            <input type="text" class="form-control mb-4" placeholder="Email/Số điện thoại/Tên đăng nhập" required> 
+          </div>
+          <div class="form-group d-flex align-items-center class-form-password">
+            <input type="password" class="form-control class-password" placeholder="Mật khẩu" required>
+            <div>
+              <button type="button" class="btn class-eye"><i class="fa fa-eye-slash"></i></button>
+            </div>
+          </div>        
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-info form-control mt-4">Đăng Nhập</button>
+            <a href="#" style="font-size: 12px;">Quên mật khẩu</a>
+          </div>
+          <div class="form-group d-flex">
+            <div class="hr1"></div>
+            <span class="ml-2 mr-2" style="color: #dbdbdb;">Hoặc</span>
+            <div class="hr1"></div>
+          </div>
+          <div class="form-group d-flex align-items-center">
+            <button class="w-100 form-control mr-3" type="button">
+              <a href="https://www.facebook.com/" class="class-a">
+                <i class="fab fa-facebook text-primary align-middle" style="font-size: 25px;"></i> <span class="ml-2 align-middle">Facebook</span>
+              </a>
+            </button>
+            <button class="w-100 form-control" type="button">
+              <a href="https://www.google.com.vn/?hl=vi" class="class-a">
+                <img src="../image/logo/logo-google.png" class="icon-gg align-middle"><span class="ml-2 align-middle">Google</span>
+              </a>
+            </button>
+          </div>
+          <p class="mb-0 text-center classb">Bạn chưa có tài khoản? <a href="#" id="no-login">đăng ký</a></p>
+        </form> 
+      </div>
+    </div>
+    <!-- form đăng nhập -->
+
+    <!-- form đăng ký -->
+    <div class="sign-in-form">
+      <div class="sign-in">
+        <button type="button" class="close-X">X</button>
+        <form>
+          <div class="form-group">
+            <p class="mb-4 h4">Đăng ký</p>
+            <div class="form-group d-flex align-items-center">
+              <input type="text" class="w-100 form-control mr-2" placeholder="Họ" required>
+              <input type="text" class="w-100 form-control" placeholder="Tên" required>
+            </div>
+            <input type="text" class="form-control" placeholder="Số điện thoại hoặc email" required>
+          </div>
+          <div class="form-group d-flex align-items-center class-form-password">
+            <input type="password" class="form-control class-password" placeholder="Mật khẩu mới" required>
+            <div>
+              <button type="button" class="btn class-eye"><i class="fa fa-eye-slash"></i></button>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn form-control bg-info mt-4">Đăng ký</button>
+          </div>
+          <div class="form-group d-flex">
+            <div class="hr1"></div>
+            <span class="ml-2 mr-2" style="color: #dbdbdb">Hoặc</span>
+            <div class="hr1"></div>
+          </div>
+          <div class="form-group d-flex align-items-center">
+              <button class="form-control w-100 mr-3">
+                <a href="https://www.facebook.com/" class="class-a"><i class="fab fa-facebook text-primary align-middle" style="font-size: 25px;"></i> <span class="ml-2 align-middle">Facebook</span></a>
+              </button>
+              <button class="form-control w-100">
+                <a href="https://www.google.com.vn/?hl=vi" class="class-a"><img src="../image/logo/logo-google.png" class="icon-gg align-middle"><span class="ml-2 align-middle">Google</span></a>
+              </button>
+          </div>
+          <p class="mb-0 text-center classb">Bạn đã có tài khoản?<a href="#" id="no-sign-in">Đăng nhập</a></p>
+        </form>
+      </div>
+    </div>
+    <!-- form đăng ký -->
+    
+
+    <!-- form giỏ hàng -->
+    <div class="class-gh">
+      <div class="gh">
+        <button type="button" class="close-X-gh">X</button>
+        <form>
+          <div class="form-group">
+            
+            <div>
+              <p class="mb-4 h3">Giỏ Hàng</p>
+            </div>
+            <div>
+              <div class="text-center">
+                <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/9bdd8040b334d31946f49e36beaf32db.png" width="300px" height="300px;">
+              </div>
+              <p class="mx-auto text-center">Không có sản phẩm nào trong giỏ hàng</p>
+              <button class="btn btn-lg mx-auto d-block class-bt-gh"><a href="../Trangchu/index.html">Tiếp tục mua sắm</a></button>
+            </div>
+          </div>
+
+          
+        </form>
+      </div>
+    </div>
+    <!-- form giỏ hàng -->
+
+    <!-- form người dùng, đơn hàng -->
+    <div class="class-nd">
+      <div class="nd">
+        <button type="button" class="close-X-nd">X</button>
+        <form>
+          <div class="form-group">
+            
+            <div>
+              <p class="mb-4 h3">Đơn hàng của tôi</p>
+            </div>
+            <!-- thanh nav tab -->
+            <ul class="nav nav-tabs justify-content-between">
+              <li class="nav-item">
+                <a id="tab1" class="nav-link active" data-toggle="tab" href="#pane-tab-1">Tất cả</a>
+              </li>
+              <li class="nav-item">
+                <a id="tab2" class="nav-link" data-toggle="tab"  href="#pane-tab-2">Chờ thanh toán</a>
+              </li>
+              <li class="nav-item">
+                <a id="tab3" class="nav-link" data-toggle="tab" href="#pane-tab-3">Vận chuyển</a>
+              </li>
+              <li class="nav-item">
+                <a id="tab4" class="nav-link" data-toggle="tab" href="#pane-tab-4">Đang giao</a>
+              </li> 
+              <li class="nav-item">
+                <a id="tab5" class="nav-link" data-toggle="tab" href="#pane-tab-5">Hoàn thành</a>
+              </li>
+              <li class="nav-item">
+                <a id="tab6" class="nav-link" data-toggle="tab" href="#pane-tab-6">Đã hủy</a>
+              </li> 
+              <li class="nav-item">
+                <a id="tab6" class="nav-link" data-toggle="tab" href="#pane-tab-6">Trả hàng \ Hoàn tiền</a>
+              </li> 
+            </ul>
+            <!-- nội dung bên trong từng tab -->
+            <div class="tab-content"> <!--định dạng và quản lý nội dung của các tab-pane bên trong-->
+              <div class="tab-pane fade show active" id="pane-tab-1"> <!--hiện thị mặc định-->
+                <div> <!--fade: mờ dần-->
+                  <div class="text-center">
+                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/5fafbb923393b712b96488590b8f781f.png" width="300px" height="300px;">
+                  </div>
+                  <p class="mx-auto text-center">Chưa có đơn hàng</p>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pane-tab-2"> <!--JS kích hoạt ứng xử nó như là phần nội dung sẽ hiện thị khi Tab kích hoạt-->
+                <div>
+                  <div class="text-center">
+                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/5fafbb923393b712b96488590b8f781f.png" width="300px" height="300px;">
+                  </div>
+                  <p class="mx-auto text-center">Chưa có đơn hàng</p>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pane-tab-3">
+                <div>
+                  <div class="text-center">
+                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/5fafbb923393b712b96488590b8f781f.png" width="300px" height="300px;">
+                  </div>
+                  <p class="mx-auto text-center">Chưa có đơn hàng</p>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pane-tab-4">
+                <div>
+                  <div class="text-center">
+                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/5fafbb923393b712b96488590b8f781f.png" width="300px" height="300px;">
+                  </div>
+                  <p class="mx-auto text-center">Chưa có đơn hàng</p>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pane-tab-5">
+                <div>
+                  <div class="text-center">
+                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/5fafbb923393b712b96488590b8f781f.png" width="300px" height="300px;">
+                  </div>
+                  <p class="mx-auto text-center">Chưa có đơn hàng</p>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pane-tab-6">
+                <div>
+                  <div class="text-center">
+                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/5fafbb923393b712b96488590b8f781f.png" width="300px" height="300px;">
+                  </div>
+                  <p class="mx-auto text-center">Chưa có đơn hàng</p>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pane-tab-7">
+                <div>
+                  <div class="text-center">
+                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/5fafbb923393b712b96488590b8f781f.png" width="300px" height="300px;">
+                  </div>
+                  <p class="mx-auto text-center">Chưa có đơn hàng</p>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </form>
+      </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- form người dùng, đơn hàng -->
+
+    <!-- form xem chi tiết -->
+    <div class="class-xct">
+      <div class="xct">
+        <button type="button" class="close-X-sp">X</button>
+        <form>
+          <div class="form-group d-flex">
+            <img class="img-sp" src="../image/laptop/ASUS.png">
+            <div class="form-group w-100">
+              <h3>Laptop ASUS VivoBook 14X A1403ZA-LY072W i3-1220P | 8GB | 256GB | 14' WUXGA | Win 11</h3>
+              <hr>
+              <div class="ml-5 mr-5">
+                <p><del>123</del> 12.951.000 ₫</p>
+                <div class="form-group mt-4 mb-4">
+                  <span class="mr-5">Vận chuyển: </span>
+                  <span><i class="fa fa-truck"></i> Miễn phí vận chuyển</span>
+                </div>
+                <div class="form-group d-flex mt-4 mb-5">
+                    <span class="mr-5 pr-3">Số lượng:</span>
+                    <input type="number" class="form-control w-25" id="SL-sp" placeholder="SL" min="0" required>
+                </div>
+                <div class="form-group d-flex align-items-center mt-5">
+                  <button type="submit" class="form-control btn w-50 mr-5 class-buy">Mua ngay</button>
+                  <button type="submit" class="form-control btn w-75 mr-5 class-cart"><i class="fas fa-shopping-cart"></i> Thêm vào giỏ hàng </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- form xem chi tiết -->
+
+
+    <main> <!--nội dung chính của trang-->
+
+      <section class="featured-products"> <!--section phân chia nội dung thành các phân đoạn-->
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="product-grid">
+
+          <div class="product">
+            <img src="../image/laptop/ASUS.png">
+            <h3>Laptop ASUS VivoBook 14X A1403ZA-LY072W i3-1220P | 8GB | 256GB | 14' WUXGA | Win 11</h3>
+            <p>12.951.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/laptop/DELL.png">
+            <h3>Laptop Dell Vostro 3400(70270645)/i5-1135G7/RAM 8GB/256GB SSD/14.0"FHD/OfficeHS/Win11</h3>
+            <p>16.889.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/laptop/DELL-latitude.png">
+            <h3>Laptop Dell Latitude 3420(L3420I5SSDFB)/ i5-1135G7/ 8GB/ 256GB SSD/ Iris Xe Graphics/ 14"HD</h3>
+            <p><del>17.222.000 ₫</del> 18.667.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/laptop/ASUS ZenBook.png">
+            <h3>Laptop ASUS ZenBook 14X OLED UM5401QA-KN209W R5-5600H | 8GB | 512GB |14' 2.8K OLED</h3>
+            <p>20.590.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/laptop/DELL 5330.png">
+            <h3>Laptop Dell Latitude 5330 Touch (CTO)/ Grey/ Intel Core i5-1245U/ RAM 16GB/ 256Gb SSD/ Intel Iris Xe Graphics/ 13.3 inch</h3>
+            <p>29.990.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/chuột/chuot.png">
+            <h3>Chuột không dây Bluetooth Logitech MX Master 3s - Yên tĩnh, 8K DPI, Cuộn siêu nhanh, sạc USB-C, Win | Mac</h3>
+            <p>2.279.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/chuột/chuot-tainghe.png">
+            <h3>Combo Chuột Logitech G304 SE Lightspeed & Tai nghe Bluetooth Logitech G435 SE - Tương thích PC,MAC PS4 PS5, Mic kép</h3>
+            <p><del>2.999.000 ₫</del> 2.039.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/chuột/chuot2.png">
+            <h3>Chuột game có dây Logitech G502 Hero - Cảm biến Hero 25k, RGB, 11 nút lập trình ....</h3>
+            <p><del>1.599.000 ₫</del> 939.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/chuột/chuot3.png">
+            <h3>Chuột không dây đa thiết bị LOGITECH M720 Bluetooth <br> <br></h3>
+            <p><del>1.274.000 ₫</del> 929.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+
+          <div class="product">
+            <img src="../image/chuột/chuot4.png">
+            <h3>Chuột game có dây Logitech G402 Hyperion Fury FPS - Theo dõi tốc độ cao, 8 nút lập trình</h3>
+            <p><del>999.000 ₫</del> 679.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/chuột/chuot5.png">
+            <h3>Chuột không dây bluetooth Logitech Signature M650 - SmartWheel, giảm ồn, tùy chỉnh các nút</h3>
+            <p><del>999.000 ₫</del> 565.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/chuột/chuot6.png">
+            <h3>Chuột game không dây Logitech G Pro X Superlight - Siêu nhẹ, 5 nút lập trình, pin lâu <br> <br></h3>
+            <p><del>4.999.000 ₫</del> 2.899.000 ₫ - 2.949.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/chuột/chuot7.png">
+            <h3>Chuột game có dây Logitech G102 Lightsync - Tùy chỉnh RGB, 6 nút lập trình, nhẹ <br></h3>
+            <p><del>499.000 ₫</del> 399.000 ₫ - 439.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/chuột/chuot8.png">
+            <h3>Chuột game không dây RGB Logitech G903 Hero - Cảm biến Hero 25k, pin sạc, PC <br> <br></h3>
+            <p><del>3.990.000 ₫</del> 2.479.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+
+          <div class="product">
+            <img src="../image/bàn phím/banphim.png">
+            <h3>Combo bàn phím Logitech MX Keys Mini và chuột Logitech MX Master 3S <br> <br></h3>
+            <p><del>6.299.000 ₫</del> 4.299.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          
+          <div class="product">
+            <img src="../image/bàn phím/banphim1.png">
+            <h3>Bàn phím cơ không dây Logitech MX Mechanical - Tactile, chiếu sáng nền, sạc USB-C, mac OS | Win</h3>
+            <p><del>4.699.000 ₫</del> 3.999.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/bàn phím/banphim2.png">
+            <h3>Combo chuột và phím cơ không dây Logitech POP KEYS & MOUSE với phím emoji có thể điều chỉnh</h3>
+            <p><del>3.990.000 ₫</del> 2.649.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/bàn phím/banphim3.png">
+            <h3>Bàn phím không dây Bluetooth Logitech MX Keys - Đèn nền cảm biến, sạc nhanh USB-C <br> <br></h3>
+            <p><del>2.999.000 ₫</del> 2.579.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/bàn phím/banphim4.png">
+            <h3>Bàn phím không dây Bluetooth Logitech MX Keys Mini - Nhỏ gọn, Phím tắt thông minh, Có bản cho Mac</h3>
+            <p><del>2.999.000 ₫</del> 1.919.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/bàn phím/banphim5.png">
+            <h3>Combo chuột phím không dây bluetooth và USB Logitech K580 & M350 - Yên tĩnh, đa thiết bị </h3>
+            <p><del>1.599.000 ₫</del> 1.379.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/bàn phím/banphim6.png">
+            <h3>Bàn Phím Không Dây Logitech Signature K650 - Nhỏ gọn, gác tay tích hợp, tương thích Mac , Bluetooth & USB Bolt</h3>
+            <p><del>1.499.000 ₫</del> 959.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="../image/bàn phím/banphim7.png">
+            <h3>Combo chuột và phím cơ không dây Logitech POP KEYS & MOUSE Và Tai nghe game Logitech G435</h3>
+            <p><del>5.999.000 ₫</del> 4.099.000 ₫</p>
+            <hr>
+            <div class="bg-info text-center align-middle xct-sp-class">
+              <i class="text-white">Xem chi tiết</i>
+            </div>
+          </div>
+
+        </div>
+      </section> <!--section phân chia nội dung thành các phân đoạn-->
+
+      <section class="about-us">
+        <h2>Về chúng tôi</h2>
+        <p>Winla là một trang web bán hàng trực tuyến chuyên về các thiết bị điện tử.</p>
+      </section>
+
+    </main> <!--nội dung chính của trang-->
+
+    <footer>
+      <p>Bản quyền © 2023 Winla</p>
+    </footer>
+
+    </body>
+  </html>
+  

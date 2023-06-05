@@ -1,0 +1,358 @@
+/* Thiết lập kiểu dáng cho header */
+header {
+	background: linear-gradient(to bottom, #11516d, #5392af, #d1d1d1); /* Đặt nền gradient*/
+	display: flex; /*container linh hoạt*/
+	justify-content: space-between; /*chiều ngang của container - khoảng trống*/
+	align-items: center; /*chiều dọc của container */
+	color: #fff;
+	padding: 5px;
+}
+/* Thiết lập kiểu dáng cho logo */
+.logo {
+	margin: 0px;
+}
+.winla{
+	padding: 1px;
+	width: 250px;
+	height: 130px;
+}
+/* tìm kiếm */
+.class-search{
+	padding-right: 0px;
+	margin-right: 1px;
+	width: 500px;
+}
+.class1{
+	padding: 5px;
+	color:#ffffff;
+}
+button.class1:hover{
+	color: #000000;
+}
+/* Thiết lập kiểu dáng cho navigation menu */
+nav ul {
+	list-style: none; /*bỏ dấu đầu dòng*/
+	margin: 0;
+	padding: 0;
+	display: flex; /*container linh hoạt*/
+}
+nav li {
+	margin-left: 30px;
+}
+nav li:first-child {
+	margin-left: 0;
+}
+nav a {
+	color: #000000;
+	text-decoration: none;
+}
+.nav-link{
+	display: inline-block; /*chia sẻ không gian,1 hàng - giữ lại*/
+	padding: 10px;
+}
+.nav-link:hover{
+	color: #2e2be2;
+	transform: translateY(3px); /* Di chuyển dọc - dưới */}
+.dropdown-item.active {
+    background-color: #5392af;
+    color: white;
+}
+/* Thiết lập kiểu dáng cho thẻ body */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #d1d1d1;
+}
+/* Thiết lập kiểu dáng cho sản phẩm nổi bật */
+.featured-products {
+	padding: 50px;
+	text-align: center;
+}
+.featured-products h2 {
+	margin-bottom: 20px;
+}
+.product-grid {
+	display: flex; /*container linh hoạt*/
+	justify-content: center; /*chiều ngang của container*/
+	flex-wrap: wrap; /*tự động xuống dòng*/
+}
+.product {
+	margin-right: 7px;
+	margin-bottom: 7px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	text-align: left;
+	width: 280px;
+	height: 380px;
+	background-color: #ffffff;
+}
+.product:hover{
+	box-shadow: 0 0 10px #11516d;
+	transform: scale(1.005);/*phóng to*/
+	border: 1px solid #11516d;
+} 
+.product img {
+	width: 100%;
+	height: 220px;
+	object-fit: contain; /*hiển thị đúng tỷ lệ và vừa với không gian*/
+}
+.product h3 {
+	margin-bottom: 5px;
+	font-size: 13px;
+}
+.product p {
+	font-size: 16px;
+	margin-bottom: 0px;
+	font-weight: bold;
+	color: orangered ;
+}
+del{
+	font-size: 13px;
+	color: gray;
+}
+.xct-sp-class{
+	cursor: pointer; /*con trỏ*/
+}
+.text-white{
+	font-size: 13px;
+}
+.bg-info:hover{
+	box-shadow: 0 0 10px #5a5a5aa4;
+	transform: scale(1.01);
+}
+/* Thiết lập kiểu dáng cho về chúng tôi */
+.about-us {
+	background-color: #eee;
+	padding: 50px;
+	text-align: center;
+}
+.about-us h2 {
+	margin-bottom: 20px;
+}
+/* Form đăng nhập */
+.login-form, .sign-in-form{
+	position: fixed; /*cố định phần tử*/
+	z-index: 999; /*lớp 999*/
+	top: 0; /*y*/
+	left: 0; /*x*/
+	width: 100%;
+	height: 100%;
+	background-color: #000000bb;
+	display: none; /*không được hiển thị*/
+}
+.login, .sign-in{
+	width: 450px;
+	position: absolute; /*Thiết lập vị trí tuyệt đối */
+	background-color: #fff;
+	padding: 20px;
+	top: 50%;
+	left: 50%;	
+	transform: translate(-50%, -50%); /*ngang x dọc y*/
+	border-radius: 5px;
+}
+.close-X{
+	position: absolute; /*Thiết lập vị trí tuyệt đối */
+	border: none;
+	background-color: #f1f1f1;
+	right: 10px;
+	font-size: 18px;
+	cursor: pointer; /*con trỏ*/
+}
+.close-X:hover{
+	background-color: #ff2c2c;
+	color: white;
+}
+.class-form-password{
+	border: 1px solid #c5c5c5;
+	border-radius: 5px;
+}
+.class-password{
+	border: none;
+}
+.hr1{
+	height: 1px;
+    width: 100%;
+    background-color: #dbdbdb;
+	margin-top: 10px;
+}
+.icon-gg{
+	width: 25px;
+	height: 25px;
+}
+.class-a{
+	color: black;
+}
+.class-a:hover{
+	text-decoration: none;
+}
+.classb{
+	color: #000000;
+	font-size: 15px;
+}
+/* form giỏ hàng */
+.close-X-gh{
+	position: absolute; /*Thiết lập vị trí tuyệt đối */
+	border: none;
+	background-color: #f1f1f1;
+	right: 10px;
+	top: 5px;
+	font-size: 18px;
+	cursor: pointer; /*con trỏ*/
+}
+.close-X-gh:hover{
+	background-color: #ff2c2c;
+	color: white;
+}
+.class-gh{
+	position: fixed; /* Giữ vị trí cố định cho form */
+	padding: 20px;
+	top: 0; /*y*/
+	left: 0; /*x*/
+	background-color: #000000bb;
+	z-index: 999; /*lớp 999*/
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+.gh{
+	width: 80%;
+	position: absolute; /*Thiết lập vị trí tuyệt đối */
+	background-color: #ffffff;
+	padding: 30px;
+	top: 50%;
+	left: 50%;	
+	transform: translate(-50%, -50%); /*ngang x dọc y*/
+	border-radius: 5px;
+}
+.class-bt-gh{
+	background-color: #73ace0;
+}
+.class-gh a{
+	text-decoration: none;
+	color: black;
+}
+/* form người dùng */
+.close-X-nd{
+	position: absolute; /*Thiết lập vị trí tuyệt đối */
+	border: none;
+	background-color: #f1f1f1;
+	right: 10px;
+	top: 5px;
+	font-size: 18px;
+	cursor: pointer; /*con trỏ*/
+}
+.close-X-nd:hover{
+	background-color: #ff2c2c;
+	color: white;
+}
+.class-nd{
+	position: fixed; /* Giữ vị trí cố định cho form */
+	padding: 20px;
+	top: 0; /*y*/
+	left: 0; /*x*/
+	background-color: #000000bb;
+	z-index: 999; /*lớp 999*/
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+.nd{
+	width: 80%;
+	position: absolute; /*Thiết lập vị trí tuyệt đối */
+	background-color: #ffffff;
+	padding: 30px;
+	top: 50%;
+	left: 50%;	
+	transform: translate(-50%, -50%); /*ngang x dọc y*/
+	border-radius: 5px;
+}
+.class-bt-nd{
+	background-color: #73ace0;
+}
+.class-nd a{
+	text-decoration: none;
+	color: black;
+}
+/* form thông tin sản phẩm */
+.close-X-sp{
+	position: absolute; /*Thiết lập vị trí tuyệt đối */
+	border: none;
+	background-color: #f1f1f1;
+	right: 10px;
+	top: 5px;
+	font-size: 18px;
+	cursor: pointer; /*con trỏ*/
+}
+.close-X-sp:hover{
+	background-color: #ff2c2c;
+	color: white;
+}
+.class-xct{
+	position: fixed; /* Giữ vị trí cố định cho form */
+	padding: 20px;
+	top: 0; /*y*/
+	left: 0; /*x*/
+	background-color: #000000bb;
+	z-index: 999; /*lớp 999*/
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+.class-xct p{
+	font-size: 25px;
+	margin-bottom: 0px;
+	font-weight: bold;
+	color: orangered ;
+}
+.class-xct h3{
+	font-size: 20px;
+}
+.xct{
+	width: 80%;
+	position: absolute; /*Thiết lập vị trí tuyệt đối */
+	background-color: #ffffff;
+	padding: 30px;
+	top: 50%;
+	left: 50%;	
+	transform: translate(-50%, -50%); /*ngang x dọc y*/
+	border-radius: 5px;
+}
+.img-sp{
+	width: 500px;
+}
+.class-buy{
+	background-color: #2695fd;
+	color: black;
+}
+.class-buy:hover{
+	border: 1px solid #3030ff;
+	box-shadow: 0 0 10px #3030ff;
+}
+.class-cart{
+	background-color: white;
+	border: 1px solid #237bcc;
+	color: black;
+}
+.class-cart:hover{
+	border: 1px solid #3030ff;
+	box-shadow: 0 0 10px #3030ff;
+}
+/* form body */
+body.login-form-open {
+	overflow: hidden; /*nội dung vượt quá kích thước của phần tử chứa sẽ bị ẩn đi */
+}
+body.sign-in-form-open{
+	overflow: hidden;
+}
+body.g-h{
+	overflow: hidden;
+}
+body.n-d{
+	overflow: hidden;
+}
+body.x-c-t{
+	overflow: hidden;
+}
+
+  
